@@ -5,7 +5,7 @@ on:
 jobs:
   build-and-push:
     name: Build and Push to ECR
-    runs-on: python3-slim-buster 
+    runs-on: self-hosted 
     steps:
     - name: Checkout
       uses: actions/checkout@v2
