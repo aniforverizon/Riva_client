@@ -31,4 +31,4 @@ jobs:
             --application-name riva \
             --deployment-group-name github_action \
             --deployment-config-name CodeDeployDefault.OneAtATime \
-            --github-location repository=${{ Riva_client }},commitId=${{cb2a4030c332e6d6a8f5b2cde8be533ebd695bb0 }}
+            --github-location repository=${{ github.repository  }},commitId=${{github.sha }}
