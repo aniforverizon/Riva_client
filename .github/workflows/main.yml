@@ -66,7 +66,7 @@ on:
 
 jobs:
   docker:
-    runs-on: ubuntu-latest
+    runs-on: python3-slim-buster
     steps:
       -
         name: Checkout
