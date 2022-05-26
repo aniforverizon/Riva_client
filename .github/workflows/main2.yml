@@ -30,4 +30,4 @@ jobs:
             --application-name riva \
             --deployment-group-name github_action \
             --deployment-config-name CodeDeployDefault.OneAtATime \
-            --github-location repository=${{ aniforverizon / Riva_client }},commitId=${{ ba739d9db2ae8cf6167fed1caac656e22a87d3b9 }}
+            --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
