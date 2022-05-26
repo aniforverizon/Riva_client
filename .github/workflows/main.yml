@@ -5,13 +5,13 @@ on:
 
 jobs:
   continuous-integration:
-    runs-on: ubuntu:latest
+    runs-on: self-hosted
     steps:
       # Step 1
       - uses: actions/checkout@v2
 
   continuous-deployment:
-    runs-on: ubuntu:latest
+    runs-on: self-hosted
     needs: [continuous-integration]
     if: github.ref == 'refs/heads/main'
     steps:
