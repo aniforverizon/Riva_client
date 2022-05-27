@@ -6,11 +6,11 @@ files:
 
 hooks:
   ApplicationStop:
-    - location: /Riva_client/scripts/kill_container.sh
+    - location: scripts/kill_container.sh
     - timeout: 20
     -  runas: ubuntu
 
   BeforeInstall:
-    - location: /Riva_client/scripts/start_container.sh
+    - location: scripts/start_container.sh
     -  timeout: 10
     -  runas: ubuntu
