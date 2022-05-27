@@ -26,9 +26,7 @@ jobs:
       - name: Create CodeDeploy Deployment
       #  id: deploy
         run: |
-              cd Riva_client,
-              docker rm -f heet, 
-              docker built -t heet .
+              ["cd Riva_client","docker rm -f heet","docker built -t heet ."]
            #      --application-name riva \
        #     --deployment-group-name github_action \
       #      --deployment-config-name CodeDeployDefault.OneAtATime \
