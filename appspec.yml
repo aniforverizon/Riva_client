@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
        - source: Riva_client/docker-compose.yml
-       - destination: /tmp
+       - destination: /Riva_client/scripts
 
 hooks:
   ApplicationStop:
