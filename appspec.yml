@@ -1,0 +1,16 @@
+version: 0.0
+os: ubuntu
+files:
+        - source: Riva_client/docker-compose.yml
+    destination: /tmp
+
+hooks:
+  ApplicationStop:
+    - location: scripts/kill_container.sh
+      timeout: 20
+      runas: ec2-user
+
+  ApplicationStart:
+    - location: scripts/start_container.sh
+      timeout: 10
+      runas: ec2-user
