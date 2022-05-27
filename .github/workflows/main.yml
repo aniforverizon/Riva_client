@@ -27,7 +27,7 @@ jobs:
       #  id: deploy
         run: |
               cd ~/Riva_client
-              docker rm -f heet
+              docker rmi -f heet
               docker built -t heet .
               docker-compose up -d
            #      --application-name riva \
