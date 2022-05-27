@@ -10,7 +10,7 @@ hooks:
     - timeout: 20
     -  runas: ubuntu
 
-  ApplicationStart:
+  BeforeInstall:
     - location: /Riva_client/scripts/start_container.sh
     -  timeout: 10
     -  runas: ubuntu
