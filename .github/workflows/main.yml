@@ -33,6 +33,7 @@ jobs:
               cd ~/anubhav/
               git clone https://github.com/aniforverizon/Riva_client.git
               cd Riva_client
+              docker container stop $(docker container ls -aq)
               docker rm -f $(docker ps -aq) 
               docker rmi -f heet
               docker-compose down
