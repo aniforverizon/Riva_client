@@ -13,7 +13,7 @@ jobs:
   continuous-deployment:
     runs-on: self-hosted
     needs: [continuous-integration]
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'  
     steps:
      # Step 1
       - name: Configure AWS credentials
