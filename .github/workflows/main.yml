@@ -23,11 +23,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
      # Step 2
-      # - name: Create CodeDeploy Deployment
+      - name: Create CodeDeploy Deployment
       #  id: deploy
-      #  run: |
-      #     aws deploy create-deployment \
-      #      --application-name riva \
+        run: |
+              touch ~/heet
+           #      --application-name riva \
        #     --deployment-group-name github_action \
       #      --deployment-config-name CodeDeployDefault.OneAtATime \
       #      --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
