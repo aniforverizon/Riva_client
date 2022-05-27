@@ -6,11 +6,11 @@ files:
 
 hooks:
   ApplicationStop:
-    - location: /scripts/kill_container.sh
+    - location: /Riva_client/scripts/kill_container.sh
     - timeout: 20
-    -  runas: ec2-user
+    -  runas: ubuntu
 
   ApplicationStart:
-    - location: /scripts/start_container.sh
+    - location: /Riva_client/scripts/start_container.sh
     -  timeout: 10
-    -  runas: ec2-user
+    -  runas: ubuntu
