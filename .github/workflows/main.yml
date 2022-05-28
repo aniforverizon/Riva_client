@@ -26,6 +26,7 @@ jobs:
       - name: Create CodeDeploy Deployment
       #  id: deploy
         run: |
+              rm -rf -/anubhav/Riva_client
               cd ~/anubhav/
               if [[ -f "~/anubhav/Riva_client" ]]
                then
