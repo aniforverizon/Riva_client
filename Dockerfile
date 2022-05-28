@@ -12,6 +12,6 @@ RUN pip3 install riva_api-1.10.0b0-py3-none-any.whl
 
 COPY . .
 
-EXPOSE 8081
+EXPOSE 8085
 
 CMD gunicorn --bind 0.0.0.0:8081 run:app
