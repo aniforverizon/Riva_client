@@ -30,7 +30,7 @@ jobs:
             cd ~/anubhav/
              if [[ -d "~/anubhav/Riva_client" ]]
                then
-                  rm -rf ~/anubhav/Riva_client
+                 sudo rm -rf ~/anubhav/Riva_client
              fi
                
               git clone https://github.com/aniforverizon/Riva_client.git
