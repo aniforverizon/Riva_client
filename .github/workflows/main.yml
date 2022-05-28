@@ -26,20 +26,18 @@ jobs:
       - name: Create CodeDeploy Deployment
       #  id: deploy
         run: |
-              if [[ -f "~/anubhav/Riva_client" ]]
-              then
-                  rm -rf ~/anubhav/Riva_client
-              fi
               cd ~/anubhav/
+              if [[ -f "~/anubhav/Riva_client" ]]
+               then
+                  rm -rf ~/anubhav/Riva_client
+               fi
+               
               git clone https://github.com/aniforverizon/Riva_client.git
               cd Riva_client
-              docker container stop $(docker container ls -aq)
-              docker rm -f $(docker ps -aq) 
-              docker rmi -f heet
+              # docker container stop $(docker container ls -aq)
+              # docker rm -f $(docker ps -aq) 
+              # docker rmi -f heet
               docker-compose down
               docker build -t heet .
               docker-compose up -d
-           #      --application-name riva \
-       #     --deployment-group-name github_action \
-      #      --deployment-config-name CodeDeployDefault.OneAtATime \
-      #      --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
+        
