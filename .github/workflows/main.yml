@@ -37,7 +37,7 @@ jobs:
             #  cd Riva_client
             git reset --hard
             git pull origin main
-              #  docker container stop $(docker container ls -aq)
+              # docker container stop $(docker container ls -aq)
               # docker rm -f $(docker ps -aq) 
             docker rmi -f heet
             docker-compose down
