@@ -27,18 +27,19 @@ jobs:
       #  id: deploy
         run: |
             
-            cd ~/anubhav/
-             if [[ -d "~/anubhav/Riva_client" ]]
-               then
-                 sudo rm -rf ~/anubhav/Riva_client
-             fi
+            cd ~/Riva_client/
+            # if [[ -d "~/anubhav/Riva_client" ]]
+            #   then
+            #     sudo rm -rf ~/anubhav/Riva_client
+            # fi
                
-              git clone https://github.com/aniforverizon/Riva_client.git
-              cd Riva_client
+            #  git clone https://github.com/aniforverizon/Riva_client.git
+            #  cd Riva_client
+            git pull origin main
               #  docker container stop $(docker container ls -aq)
               # docker rm -f $(docker ps -aq) 
-               docker rmi -f heet
-              docker-compose down
-              docker build -t heet .
-              docker-compose up -d
+            docker rmi -f heet
+            docker-compose down
+            docker build -t heet .
+            docker-compose up -d
         
